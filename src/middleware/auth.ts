@@ -1,5 +1,4 @@
-// Auth middleware with JWT for express
-// Path: src/middleware/auth.ts
+
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import { PrismaClient } from "@prisma/client";

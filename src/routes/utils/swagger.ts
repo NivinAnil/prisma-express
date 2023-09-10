@@ -14,11 +14,6 @@ const options: swaggerJsDoc.Options = {
         email: "nivinanil244@gamil.com",
       },
     },
-    // servers: [
-    //   {
-    //     url: "http://localhost:5000",
-    //   },
-    // ],
     components: {
       securitySchemes: {
         bearerAuth: {
@@ -39,7 +34,7 @@ const options: swaggerJsDoc.Options = {
 
 const swaggerSpec = swaggerJsDoc(options);
 
-function swaggerJsDocs(app: Express, port: number) {
+function swaggerJsDocs(app: Express, port: any | number) {
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
   app.get("/api-docs.json", (req: Request, res: Response) => {
