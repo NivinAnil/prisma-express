@@ -6,7 +6,15 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 const user = express.Router();
 
-// getall user paginated set default page to 0 and size to 10 add total data
+
+/**
+ * Description
+ * @param {any} "/user"
+ * @param {any} auth
+ * @param {any} async(req
+ * @param {any} res
+ * @returns {any}
+ */
 user.get("/user", auth, async (req, res) => {
   try {
     const { page = 0, size = 10, email = "" } = req.query;

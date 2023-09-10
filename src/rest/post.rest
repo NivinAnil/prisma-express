@@ -1,0 +1,18 @@
+### Get all posts
+GET http://localhost:4000/post
+
+### Get my Posts
+GET http://localhost:4000/post/my
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0OGJjNjNiLTgwNjMtNDA4Yy05NGZhLTNjMjMyYTMzZmU3NyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjkzNTE2MTk3LCJleHAiOjE2OTM1NTIxOTd9.-VnBdx53Ymi3p9yoUhP5Qg3KcFY-5ceSyYvksKltY08
+
+### Create a Post
+POST http://localhost:4000/post
+Content-Type: application/json
+
+{
+        "content":"Test 2",
+        "title":"This is test 2",
+        "authorId":"4a22b39f-ea20-4767-981c-5766fb80e280",
+        "published":true
+}

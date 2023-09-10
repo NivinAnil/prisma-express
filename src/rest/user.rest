@@ -1,0 +1,61 @@
+### User Sign Up
+
+POST http://localhost:4000/user/signup
+Content-Type: application/json
+
+{
+    "name": "John3 Doe",
+    "email": "john3@email.com",
+    "password": "123456"
+}
+
+### User Sign In
+POST http://localhost:4000/user/signin
+Content-Type: application/json
+
+{
+    "email": "john3@email.com",
+    "password": "123456"
+}
+
+### Refresh Access Token
+
+POST http://localhost:4000/user/refresh
+Content-Type: application/json
+
+{
+    "refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiMGI5ODk4LTI5NDktNGNmYy05OTcyLTg0YWUwZDM2MDU3OCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjkzNDgyMzI1LCJleHAiOjE2OTQwODcxMjV9.aD4oByhYTEwA12kEkOOHRcKTP5gm1mX898ePWCSfiOk"
+}
+
+### Get User 
+
+GET http://localhost:4000/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0OGJjNjNiLTgwNjMtNDA4Yy05NGZhLTNjMjMyYTMzZmU3NyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjkzODA4NjQ4LCJleHAiOjE2OTM4NDQ2NDh9.pAALU1T5b7K9VHUMyOtpvWJQo91PcOk4Sn11H5UorHg
+
+### Get User By Id
+
+GET http://localhost:4000/user/4a22b39f-ea20-4767-981c-5766fb80e280
+Content-Type: application/json
+
+
+### Follow user
+POST http://localhost:4000/user/follow/ecfb478e-74f9-4485-a23c-9d434acb1ede
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0OGJjNjNiLTgwNjMtNDA4Yy05NGZhLTNjMjMyYTMzZmU3NyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjkzNTEzODQ4LCJleHAiOjE2OTM1NDk4NDh9.h7d8SQoxsEtv9-l9vctkTqXyqVpGtnfJSg1avBS5DBw
+
+### my following
+GET http://localhost:4000/user/my/following
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0OGJjNjNiLTgwNjMtNDA4Yy05NGZhLTNjMjMyYTMzZmU3NyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjkzNTEzODQ4LCJleHAiOjE2OTM1NDk4NDh9.h7d8SQoxsEtv9-l9vctkTqXyqVpGtnfJSg1avBS5DBw
+
+
+### /user/my/follower
+GET http://localhost:4000/user/my/follower
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0OGJjNjNiLTgwNjMtNDA4Yy05NGZhLTNjMjMyYTMzZmU3NyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjkzNTEzODQ4LCJleHAiOjE2OTM1NDk4NDh9.h7d8SQoxsEtv9-l9vctkTqXyqVpGtnfJSg1avBS5DBw
+
+### unfollow
+DELETE  http://localhost:4000/user/unfollow/ecfb478e-74f9-4485-a23c-9d434acb1ede
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0OGJjNjNiLTgwNjMtNDA4Yy05NGZhLTNjMjMyYTMzZmU3NyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjkzNTEzODQ4LCJleHAiOjE2OTM1NDk4NDh9.h7d8SQoxsEtv9-l9vctkTqXyqVpGtnfJSg1avBS5DBw
